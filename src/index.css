@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Ophelia";
+  src: url("/src/assets/fonts/Ophelia-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ophelia";
+  src: url("./assets/fonts/Ophelia-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-ophelia {
+  font-family: "Ophelia", serif;
+}
