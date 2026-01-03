@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import Footer from './Footer';
 
 
 
@@ -406,16 +407,7 @@ function Home() {
             </div>
 
             {/* footer */}
-            <div className="flex h-[400px] mt-20 bg-[#3A53A4]">
-
-                <div>
-                    <img className='w-[160px] h-[160px] mt-10 ml-[80px] bg-white rounded-2xl' src="./logo.png" />
-                </div>
-
-                <div>
-
-                </div>
-            </div>
+            <Footer/>
 
 
         </div>
