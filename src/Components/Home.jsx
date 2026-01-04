@@ -7,10 +7,7 @@ import Footer from './Footer';
 function Home() {
     return (
 
-        <div className='flex flex-col w-full overflow-y-auto'>
-
-            {/* navigation bar */}
-            <Navbar />
+        <div className='flex flex-col w-full overflow-y-auto'>          
            
 
             <section className="relative h-[550px] gap-6 pl-15 py-25">
@@ -405,9 +402,6 @@ function Home() {
                     </div>
                 </div>
             </div>
-
-            {/* footer */}
-            <Footer/>
 
 
         </div>

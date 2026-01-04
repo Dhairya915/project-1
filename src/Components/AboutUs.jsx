@@ -1,8 +1,9 @@
 import React from 'react'
+import Header from './Header'
 
 function AboutUs() {
   return (
-    <div>AboutUs</div>
+    <div className='bg-amber-300'>hello</div>
   )
 }
 
