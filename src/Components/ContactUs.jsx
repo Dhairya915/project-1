@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 
 function ContactUs() {
 
@@ -26,13 +26,42 @@ function ContactUs() {
     },
   ];
 
+ 
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [message, setMessage] = useState("");
+
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name || !number || !message) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    const formData = {
+      name,
+      number,
+      message,
+    };
+
+    console.log("Form Submitted:", formData);
+
+    alert("Form submitted successfully!");
+
+    // Reset form
+    setName("");
+    setNumber("");
+    setMessage("");
+  };
 
   return (
-    <div className='relative h-[748px] w-full '>
+    <div className="relative h-[748px] w-full">
 
-      <div className='absolute h-[605px] w-[1327px] top-[67px] left-[93px] bg-white'>
+      <div className="absolute h-[605px] w-[1327px] top-[67px] left-[93px] bg-white">
 
-        {/* contact us */}
+        {/* CONTACT INFO */}
         <div className="absolute top-[49px] w-[666px] h-[500px] flex flex-col gap-6">
 
           {/* Caption */}
@@ -51,7 +80,7 @@ function ContactUs() {
             >
               <div className="flex items-center gap-4 px-4">
 
-                {/* Rounded icon container */}
+                {/* Rounded icon */}
                 <div className="w-[50px] h-[50px] rounded-full bg-[#F5F5F5] flex items-center justify-center">
                   <img
                     src={card.icon}
@@ -73,14 +102,14 @@ function ContactUs() {
               </div>
             </div>
           ))}
-
         </div>
 
-
-        {/* contact form */}
+        {/* CONTACT FORM */}
         <div className="absolute h-[605px] w-[619px] right-0 rounded-md bg-[#F5F5F5] flex justify-center">
-          <div className="h-[533px] w-[564px] mt-5 bg-[#F5F5F5] rounded-md flex flex-col p-5">
-
+          <form
+            className="h-[533px] w-[564px] mt-5 rounded-md flex flex-col p-5"
+            onSubmit={handleSubmit}
+          >
             <span className="text-[26px] text-[#555555] font-semibold">
               Contact Form
             </span>
@@ -88,35 +117,46 @@ function ContactUs() {
             {/* Name */}
             <div className="flex flex-col gap-3 mt-6">
               <span className="text-[16px]">Full Name</span>
-              <input className="h-[50px] w-full bg-white rounded-md" />
+              <input
+                className="h-[50px] w-full bg-white rounded-md px-3"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </div>
 
             {/* Phone / Email */}
             <div className="flex flex-col gap-3 mt-5">
               <span className="text-[16px]">Phone Number / Email</span>
-              <input className="h-[50px] w-full bg-white rounded-md" />
+              <input
+                className="h-[50px] w-full bg-white rounded-md px-3"
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
+              />
             </div>
 
             {/* Message */}
             <div className="flex flex-col gap-3 mt-5">
               <span className="text-[16px]">Message</span>
-              <textarea className="h-[122px] w-full bg-white rounded-md"></textarea>
+              <textarea
+                className="h-[122px] w-full bg-white rounded-md px-3 py-2"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
             </div>
 
-            {/* Button at bottom */}
-            <button className="mt-auto w-full h-[50px] bg-[#3A53A4] font-semibold flex justify-center items-center text-white text-[20px] rounded-md">
+            {/* Submit */}
+            <button
+              type="submit"
+              className="mt-auto w-full h-[50px] bg-[#3A53A4] font-semibold flex justify-center items-center text-white text-[20px] rounded-md"
+            >
               Submit
             </button>
-
-          </div>
+          </form>
         </div>
 
-
       </div>
-
-
     </div>
-  )
+  );
 }
 
-export default ContactUs
+export default ContactUs;
