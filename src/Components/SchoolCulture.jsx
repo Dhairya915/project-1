@@ -1,9 +1,9 @@
 import React from 'react'
 
-function schoolCulture() {
+function SchoolCulture() {
   return (
-    <div>schoolCulture</div>
+    <div>SchoolCulture</div>
   )
 }
 
-export default schoolCulture
+export default SchoolCulture

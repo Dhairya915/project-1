@@ -1,9 +1,9 @@
 import React from 'react'
 
-function coCurricular() {
+function CoCurricular() {
   return (
-    <div>coCurricular</div>
+    <div>CoCurricular</div>
   )
 }
 
-export default coCurricular
+export default CoCurricular
