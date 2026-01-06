@@ -21,7 +21,7 @@ function Header1() {
       <div className="relative h-[50px] bg-white">
 
         {/* social media */}
-        <div className='absolute h-[24px] w-[208px]  top-[15px] left-[80px] flex items-center justify-between'>
+        <div className='absolute h-[28.95px] w-[208px]  top-[15px] left-[80px] flex items-center justify-between'>
           <span> Follow us</span>
           {/* <img src="./google_icon.png"/> */}
           <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
