@@ -26,12 +26,12 @@ function ContactUs() {
     },
   ];
 
- 
+
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
 
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -76,7 +76,7 @@ function ContactUs() {
           {contactCards.map((card) => (
             <div
               key={card.id}
-              className={`w-full rounded-md border flex items-center ${card.height}`}
+              className={`w-full rounded-md border border-[#5555551A] flex items-center ${card.height}`}
             >
               <div className="flex items-center gap-4 px-4">
 
@@ -102,6 +102,7 @@ function ContactUs() {
               </div>
             </div>
           ))}
+
         </div>
 
         {/* CONTACT FORM */}
