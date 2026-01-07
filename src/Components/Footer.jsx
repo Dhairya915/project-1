@@ -10,7 +10,7 @@ function Footer() {
 
 
 
-        <div className="h-[400px] bg-[#3A53A4] relative mt-5">
+        <div className="h-[400px] w-full bg-[#3A53A4] relative mt-5">
 
             {/* Logo */}
             <img
