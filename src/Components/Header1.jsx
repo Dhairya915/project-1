@@ -11,52 +11,57 @@ function Header1() {
       : "font-medium"
     }`;
 
-
-
   return (
+    <header className="relative">
 
-    <div className="relative w-full ">
+      {/* Top div with fading blue bottom border */}
+      <div
+        className="
+        relative h-[50px] bg-white z-0
 
-      {/* Top div – 50px */}
-      <div className="relative h-[50px] bg-white">
+        /* thick outer fade */
+        after:content-['']
+        after:absolute after:bottom-0 after:left-0
+        after:w-full after:h-[1px]
+        after:bg-gradient-to-r
+        after:from-[#3A53A4]
+        after:via-[#3A53A4]/20
+        after:to-[#3A53A4]
 
-        {/* social media */}
-        <div className='absolute h-[28.95px] w-[208px]  top-[15px] left-[80px] flex items-center justify-between'>
-          <span> Follow us</span>
-          {/* <img src="./google_icon.png"/> */}
+        /* thin inner line */
+        before:content-['']
+        before:absolute before:bottom-0 before:left-0
+        before:w-full before:h-[0.5px]
+        before:bg-gradient-to-r
+        before:from-[#3A53A4]/60
+        before:via-transparent
+        before:to-[#3A53A4]/60
+      "
+      >
+
+        {/* Social media left side */}
+        <div className="absolute h-[28.95px] w-[208px] top-[15px] left-[80px] flex items-center justify-between">
+          <span className="text-sm font-medium">Follow us</span>
+
           <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/google_icon.png"
-              alt="google logo"
-              className=" object-contain cursor-pointer"
-            />
+            <img src="/google_icon.png" alt="google logo" className="object-contain cursor-pointer" />
           </a>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/facebook.png"
-              alt="facebook logo"
-              className=" object-contain cursor-pointer"
-            />
+            <img src="/facebook.png" alt="facebook logo" className="object-contain cursor-pointer" />
           </a>
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <img
-              src="/instagram.png"
-              alt="instagram logo"
-              className=" object-contain cursor-pointer"
-            />
+            <img src="/instagram.png" alt="instagram logo" className="object-contain cursor-pointer" />
           </a>
         </div>
 
-        {/* right side */}
-        <div className="absolute w-[342px] h-[28.95px]  top-[13px] left-[1091px] flex items-center justify-between px-1">
-          {/* Left child */}
-          <Link to="/admissions" className="  flex items-center gap-3">
+        {/* Right side (admission & phone) */}
+        <div className="absolute w-[342px] h-[28.95px] top-[13px] left-[1091px] flex items-center justify-between px-1">
+          <Link to="/admissions" className="flex items-center gap-3 text-sm font-medium">
             <PencilLine />
             <span>Admission Form</span>
           </Link>
 
-          {/* Right child */}
-          <div className="  flex items-center gap-3">
+          <div className="flex items-center gap-3 text-sm font-medium">
             <PhoneCall />
             <span>(914) 703-2250</span>
           </div>
@@ -64,26 +69,22 @@ function Header1() {
 
       </div>
 
-      {/* Middle image (height = 50 + 105 = 155px) */}
+      {/* Middle large logo overlapping top div */}
       <img
         src="/logo.png"
         alt="logo"
         className="
-          absolute
-          left-1/2 -translate-x-1/2
-          top-0
-          h-[155px]
-          object-contain
-          z-10
-        "
+        absolute
+        left-1/2 -translate-x-1/2
+        top-0
+        h-[155px]
+        object-contain
+        z-10
+      "
       />
 
-      {/* Bottom div – 105px */}
-      {/* <div className="h-[105px] bg-gray-100">
-        <Link to="/about-us" className=''>
-        </Link>
-      </div> */}
-      <div className="flex items-center justify-between h-[105px] px-6 py-4">
+      {/* Bottom nav div */}
+      <div className="flex items-center justify-between h-[105px]  px-6 py-4 bg-white relative z-0">
 
         {/* Left links */}
         <div className="flex items-center gap-8">
@@ -95,7 +96,6 @@ function Header1() {
 
         {/* Center logo */}
         <div className="flex-1 flex justify-center">
-          {/* Place your logo here */}
           <img src="/logo.png" alt="Logo" className="h-[80px] object-contain" />
         </div>
 
@@ -104,23 +104,23 @@ function Header1() {
           <NavLink to="/gallery" className={navLinkClass}>Gallery</NavLink>
           <NavLink to="/admissions" className={navLinkClass}>Admissions</NavLink>
           <NavLink to="/contact-us" className={navLinkClass}>Contact Us</NavLink>
-          <div className="relative w-[208px] h-[36px]">
-            {/* Icon in place of placeholder */}
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
 
-            {/* Input box */}
+          {/* Search box */}
+          <div className="relative w-[208px] h-[36px]">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
             <input
               type="text"
               className="w-full h-full pl-10 pr-3 border border-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-[#F0942A]"
+              placeholder="Search..."
             />
           </div>
 
         </div>
 
       </div>
+    </header>
+  );
 
-    </div>
-  )
 }
 
 
