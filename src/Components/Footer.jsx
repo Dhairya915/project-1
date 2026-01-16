@@ -70,7 +70,7 @@ function Footer() {
 
 
             {/* links */}
-            <div className='absolute w-[151px] h-[269px] text-white top-[57px] left-[809px] flex flex-col items-center justify-between '>
+            <div className='absolute w-[151px] h-[269px] text-white text-[18px] top-[57px] left-[809px] flex flex-col  justify-between '>
                 <NavLink to="/about-us" >About Us</NavLink>
                 <NavLink to="/academic-culture" >Academic Culture</NavLink>
                 <NavLink to="/school-culture" >School Culture</NavLink>
@@ -89,8 +89,6 @@ function Footer() {
                     loading="lazy"
                 />
             </div>
-
-
 
         </div>
     )

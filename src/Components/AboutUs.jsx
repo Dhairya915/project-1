@@ -4,61 +4,71 @@ import React from 'react'
 function AboutUs() {
 
   const items = [
-    {
-      title: "Attendance Policy",
-      description:
-        "Regular attendance is compulsory for academic progress and participation in school activities.",
-      color: "blue",
-    },
-    {
-      title: "Discipline Policy",
-      description:
-        "Students are expected to maintain respectful behavior and follow school rules at all times.",
-      color: "blue",
-    },
-    {
-      title: "Uniform Policy",
-      description:
-        "Wearing the proper school uniform daily is mandatory for all students.",
-      color: "blue",
-    },
-    {
-      title: "Homework Policy",
-      description:
-        "Homework must be completed on time to support continuous learning.",
-      color: "orange",
-    },
-    {
-      title: "Examination Policy",
-      description:
-        "Students must appear for all exams honestly and as per schedule.",
-      color: "orange",
-    },
-    {
-      title: "Mobile Phone Policy",
-      description:
-        "Mobile phones are not allowed within the school premises.",
-      color: "orange",
-    },
-    {
-      title: "Health and Safety Policy",
-      description:
-        "We ensure a clean, safe, and secure environment for every student.",
-      color: "blue",
-    },
-    {
-      title: "Fee Payment Policy",
-      description:
-        "All fees should be paid on time as per the school’s payment schedule.",
-      color: "blue",
-    },
-    {
-      title: "Digital Etiquette Policy",
-      description:
-        "Students must use digital platforms responsibly and respectfully.",
-      color: "blue",
-    },
-  ];
+  {
+    title: "Attendance Policy",
+    description:
+      "Regular attendance is compulsory for academic progress and participation in school activities.",
+    borderTop: "border-t-4 border-t-[#E8ECF7]",
+    textColor: "text-[#3A53A4]",
+  },
+  {
+    title: "Discipline Policy",
+    description:
+      "Students are expected to maintain respectful behavior and follow school rules at all times.",
+    borderTop: "border-t-4 border-t-[#E8ECF7]",
+    textColor: "text-[#3A53A4]",
+  },
+  {
+    title: "Uniform Policy",
+    description:
+      "Wearing the proper school uniform daily is mandatory for all students.",
+    borderTop: "border-t-4 border-t-[#E8ECF7]",
+    textColor: "text-[#3A53A4]",
+  },
+  {
+    title: "Homework Policy",
+    description:
+      "Homework must be completed on time to support continuous learning.",
+    borderTop: "border-t-4 border-t-[#FFF1E1]",
+    textColor: "text-[#F0942A]",
+  },
+  {
+    title: "Examination Policy",
+    description:
+      "Students must appear for all exams honestly and as per schedule.",
+    borderTop: "border-t-4 border-t-[#FFF1E1]",
+    textColor: "text-[#F0942A]",
+  },
+  {
+    title: "Mobile Phone Policy",
+    description:
+      "Mobile phones are not allowed within the school premises.",
+    borderTop: "border-t-4 border-t-[#FFF1E1]",
+    textColor: "text-[#F0942A]",
+  },
+  {
+    title: "Health and Safety Policy",
+    description:
+      "We ensure a clean, safe, and secure environment for every student.",
+    borderTop: "border-t-4 border-t-[#E8ECF7]",
+    textColor: "text-[#3A53A4]",
+  },
+  {
+    title: "Fee Payment Policy",
+    description:
+      "All fees should be paid on time as per the school’s payment schedule.",
+    borderTop: "border-t-4 border-t-[#E8ECF7]",
+    textColor: "text-[#3A53A4]",
+  },
+  {
+    title: "Digital Etiquette Policy",
+    description:
+      "Students must use digital platforms responsibly and respectfully.",
+    borderTop: "border-t-4 border-t-[#E8ECF7]",
+    textColor: "text-[#3A53A4]",
+  },
+];
+
 
   const staffMembers = [
     { id: 1, name: "Sanjay Varma", role: "Principle", image: "/image1.png" },
@@ -261,22 +271,22 @@ function AboutUs() {
           <span className='text-[30px] text-[#555555] font-semibold'>Lorem ipsum dolor sit amet, consectetur elit.</span>
         </div>
 
-        {/* <div className='w-[1352px] h-[405px] mt-12 bg-blue-300'>
 
-        </div> */}
         <div className="w-[1352px] h-[405px] mt-12  grid grid-cols-3 grid-rows-3 gap-4 place-items-center rounded-xl">
           {items.map((item, index) => (
-            <div key={index} className="w-[437px] h-[130px] bg-[#F8F8F8] shadow-xl rounded-lg ">
-              <h3
-                className={`font-semibold text-lg ${item.color === "orange" ? "text-[#F0942A]" : "text-[#3A53A4]"
-                  }`}
-              >
+            <div
+              key={index}
+              className={`w-[437px] h-[130px] bg-[#F8F8F8]  rounded-lg ${item.borderTop}`}
+            >
+              <h3 className={`font-semibold text-lg ${item.textColor}`}>
                 {item.title}
               </h3>
+
               <p className="text-[#8D8D8D] text-sm mt-2">
                 {item.description}
               </p>
             </div>
+
           ))}
 
         </div>
@@ -376,7 +386,7 @@ function AboutUs() {
               className="w-[223px] h-[282px] flex flex-col items-center"
             >
               {/* Image */}
-              <div className="w-[180px] h-[180px] rounded-full border-4 border-blue-600 overflow-hidden">
+              <div className="w-[180px] h-[180px] rounded-full border-4 border-[#3A53A4] overflow-hidden">
                 <img
                   src={member.image}
                   alt={member.name}
