@@ -2,6 +2,14 @@ import React from 'react'
 
 function SchoolCulture() {
 
+   const staffMembers = [
+    { id: 1, name: "Sanjay Varma", role: "Principle", image: "/image1.png" },
+    { id: 2, name: "Sanjay Varma", role: "Teacher", image: "/image1.png" },
+    { id: 3, name: "Sanjay Varma", role: "Teacher", image: "/image1.png" },
+    { id: 4, name: "Sanjay Varma", role: "Teacher", image: "/image1.png" },
+    { id: 5, name: "Sanjay Varma", role: "Teacher", image: "/image1.png" },
+  ];
+
   return (
 
     <div className='w-full'>
