@@ -2,7 +2,7 @@ import React from 'react'
 
 function SchoolCulture() {
 
-   const staffMembers = [
+  const staffMembers = [
     { id: 1, name: "Sanjay Varma", role: "Principle", image: "/image1.png" },
     { id: 2, name: "Sanjay Varma", role: "Teacher", image: "/image1.png" },
     { id: 3, name: "Sanjay Varma", role: "Teacher", image: "/image1.png" },
@@ -127,7 +127,7 @@ function SchoolCulture() {
           {/* image */}
           <div className='w-[550px] h-[460px] bg-[#F8F8F8] flex justify-center items-center'>
             <div className='w-[312px] h-[296px] rounded-full'>
-              <img src="./logo.png"  alt="logo of school" />
+              <img src="./logo.png" alt="logo of school" />
             </div>
           </div>
 
@@ -158,7 +158,7 @@ function SchoolCulture() {
               </div>
             </div>
 
-             {/* four-A */}
+            {/* four-A */}
             <div className='w-full h-[100px] bg-[#F8F8F8] rounded-2xl'>
               <div className='w-[598px] h-[71px] flex flex-col mt-3.25 ml-8.25 justify-center'>
                 <span className='text-[22px] font-semibold text-[#555555] '>Respect for All</span>
@@ -166,114 +166,128 @@ function SchoolCulture() {
               </div>
             </div>
           </div>
-          
+
 
         </div>
 
       </div>
 
       {/* gallery */}
-      <div className="py-17 bg-white h-[706px] ">
-                <p className="w-full text-center text-[#F0942AE5] text-[18px] font-semibold">
-                    Gallery
-                </p>
+      <div className=" bg-white h-[640px]  mt-5">
 
-                <p className="w-full text-center text-[#555555] text-[30px] font-semibold">
-                    Life at Shishumandir – A Visual Story
-                </p>
+        <p className="w-full text-center text-[#F0942AE5] text-[18px] font-semibold">
+          Gallery
+        </p>
 
-                <div className="w-full  p-5 mt-10">
-                    {/* Grid container */}
-                    <div className="grid grid-cols-5 gap-4 max-w-[1200px] mx-auto">
+        <p className="w-full text-center text-[#555555] text-[30px] font-semibold">
+          Life at Shishumandir – A Visual Story
+        </p>
 
-                        {/* Row 1 */}
-                        <div className="flex justify-center">
-                            <img src="/image1.png" alt="Image 1" className="h-[200px] object-cover rounded" />
-                        </div>
-                        <div className="flex justify-center">
-                            <img src="/image2.png" alt="Image 2" className="h-[200px] object-cover rounded" />
-                        </div>
-                        <div className="flex justify-center">
-                            <img src="/image3.png" alt="Image 3" className="h-[200px] object-cover rounded" />
-                        </div>
-                        <div className="flex justify-center">
-                            <img src="/img1.png" alt="Image 4" className="h-[200px] object-cover rounded" />
-                        </div>
-                        <div className="flex justify-center">
-                            <img src="/img2b.png" alt="Image 5" className="h-[200px] object-cover rounded" />
-                        </div>
+        <div className="w-full h-[501px]  my-14 mx-2.5">
 
-                        {/* Row 2 */}
-                        <div className="flex justify-center">
-                            <img src="/img2b2.png" alt="Image 6" className="h-[200px] object-cover rounded" />
-                        </div>
-                        <div className="flex justify-center">
-                            <img src="/img1r.png" alt="Image 7" className="h-[200px] object-cover rounded" />
-                        </div>
-                        <div className="flex justify-center">
-                            <img src="/img1l.png" alt="Image 8" className="h-[200px] object-cover rounded" />
-                        </div>
-                        <div className="flex justify-center">
-                            <img src="/img2r.png" alt="Image 9" className="h-[200px] object-cover rounded" />
-                        </div>
-                        <div className="flex justify-center">
-                            <img src="/img2b.png" alt="Image 10" className="h-[200px] object-cover rounded" />
-                        </div>
+          <div
+            className="w-full h-full grid grid-rows-[244px_257px] grid-cols-[289px_310px_219px_199px_199px_232px_61px] gap-2.5"
+          >
+            {/* ROW 1 */}
 
-                    </div>
-                </div>
+            <img src="/image2.png" className="w-[289px] h-[244px] object-cover rounded-lg" />
+
+            {/* Image 3 – spans 2 rows */}
+            <img
+              src="/image1.png"
+              className="row-span-2 w-[310px] h-[500px] object-cover rounded-lg"
+            />
+
+            {/* Image 4 – spans 2 columns */}
+            <img
+              src="/img1.png"
+              className="col-span-2 w-[427px] h-[301px] object-cover rounded-lg"
+            />
+
+            <img src="/lab.png" className="w-[219px] h-[199px] object-cover rounded-lg" />
+            <img src="/img4b.png" className="w-[232px] h-[199px] object-cover rounded-lg" />
+            <div />
+
+
+            {/* ROW 2 */}
+
+            <img src="/image3.png" className="w-[289px] h-[245px] object-cover rounded-lg" />
+
+            {/* Image 5 */}
+            <img
+              src="/img2b.png"
+              className="col-start-3 row-start-2 w-[219px] h-[190px] object-cover rounded-[10px] mt-[55px]"
+            />
+
+            {/* Image 6 */}
+            <img
+              src="/img2b2.png"
+              className="col-start-4 row-start-2 w-[199px] h-[190px] object-cover rounded-[10px] mt-[55px]"
+            />
+
+            {/* Image 9 – spans 2 columns */}
+            <img
+              src="/img9.png"
+              className="col-start-5 col-span-2 row-start-2 w-[464px] h-[292px] object-cover rounded-[10px] -translate-y-[47px]"
+            />
+
+          </div>
+
+        </div>
+
+
 
       </div>
 
       {/* enroll and query */}
       <div className="flex h-[445px] ">
-                {/* Left Image */}
-                <div className="relative w-1/2 h-full">
-                    <img
-                        src="/campus1.jpg"
-                        alt="Campus 1"
-                        className="w-full h-full object-cover rounded-l"
-                    />
-                    {/* Overlay with text inside */}
-                    <div
-                        className="absolute inset-0 rounded-l flex flex-col items-center justify-center text-center gap-2"
-                        style={{ backgroundColor: "rgba(58, 83, 164, 0.8)" }}
-                    >
-                        <p className="text-white font-semibold text-[18px]">Admission</p>
-                        <p className="text-white font-bold text-[33px]">Enrol Now!</p>
-                        <p className='text-white  text-[18px]'>
-                            Admissions open! Join a school that nurtures values, learning, <br></br>
-                            and growth. Secure your child’s bright future today.
-                        </p>
-                        <button className='rounded-full bg-[#3A53A4] text-white font-semibold px-6 py-2  '>
-                            Start Your Journey
-                        </button>
-                    </div>
-                </div>
+        {/* Left Image */}
+        <div className="relative w-1/2 h-full">
+          <img
+            src="/campus1.jpg"
+            alt="Campus 1"
+            className="w-full h-full object-cover rounded-l"
+          />
+          {/* Overlay with text inside */}
+          <div
+            className="absolute inset-0 rounded-l flex flex-col items-center justify-center text-center gap-2"
+            style={{ backgroundColor: "rgba(58, 83, 164, 0.8)" }}
+          >
+            <p className="text-white font-semibold text-[18px]">Admission</p>
+            <p className="text-white font-bold text-[33px]">Enrol Now!</p>
+            <p className='text-white  text-[18px]'>
+              Admissions open! Join a school that nurtures values, learning, <br></br>
+              and growth. Secure your child’s bright future today.
+            </p>
+            <button className='rounded-full bg-[#3A53A4] text-white font-semibold px-6 py-2  '>
+              Start Your Journey
+            </button>
+          </div>
+        </div>
 
-                {/* Right Image */}
-                <div className="relative w-1/2 h-full">
-                    <img
-                        src="/campus2.jpg"
-                        alt="Campus 2"
-                        className="w-full h-full object-cover rounded-r"
-                    />
-                    {/* Overlay with text inside */}
-                    <div
-                        className="absolute inset-0 rounded-r flex flex-col items-center justify-center text-center gap-2"
-                        style={{ backgroundColor: "rgba(240, 148, 42, 0.65)" }}
-                    >
-                        <p className="text-white font-semibold text-[18px]">Inquiry</p>
-                        <p className="text-white font-bold text-[28px]">Ask Us</p>
-                        <p className='text-white  text-[18px]'>
-                            We’re here to help! Reach out now to know more about <br></br>
-                            admissions, facilities, or anything else.
-                        </p>
-                        <button className='rounded-full bg-[#F0942A] text-white font-semibold px-6 py-2  '>
-                            Start Your Journey
-                        </button>
-                    </div>
-                </div>
+        {/* Right Image */}
+        <div className="relative w-1/2 h-full">
+          <img
+            src="/campus2.jpg"
+            alt="Campus 2"
+            className="w-full h-full object-cover rounded-r"
+          />
+          {/* Overlay with text inside */}
+          <div
+            className="absolute inset-0 rounded-r flex flex-col items-center justify-center text-center gap-2"
+            style={{ backgroundColor: "rgba(240, 148, 42, 0.65)" }}
+          >
+            <p className="text-white font-semibold text-[18px]">Inquiry</p>
+            <p className="text-white font-bold text-[28px]">Ask Us</p>
+            <p className='text-white  text-[18px]'>
+              We’re here to help! Reach out now to know more about <br></br>
+              admissions, facilities, or anything else.
+            </p>
+            <button className='rounded-full bg-[#F0942A] text-white font-semibold px-6 py-2  '>
+              Start Your Journey
+            </button>
+          </div>
+        </div>
       </div>
 
     </div>

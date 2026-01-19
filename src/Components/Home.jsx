@@ -7,10 +7,10 @@ import Footer from './Footer';
 function Home() {
     return (
 
-        <div className='flex flex-col w-full overflow-y-auto'>
+        <div className='flex flex-col  overflow-y-auto '>
 
 
-            <section className="relative h-[550px] gap-6 pl-15 py-25">
+            <section className="relative h-[550px] w-full gap-6  py-25">
 
                 <img
                     src="/back.jpg"
@@ -300,7 +300,7 @@ function Home() {
             </div>
 
             {/* gallery */}
-            <div className="py-17 bg-white h-[710px] ">
+            <div className=" bg-white h-[640px]  mt-5">
 
                 <p className="w-full text-center text-[#F0942AE5] text-[18px] font-semibold">
                     Gallery
@@ -367,7 +367,7 @@ function Home() {
             </div>
 
             {/* enroll and query */}
-            <div className="flex h-[400px] mt-20">
+            <div className="flex h-[400px] mt-10">
                 {/* Left Image */}
                 <div className="relative w-1/2 h-full">
                     <img

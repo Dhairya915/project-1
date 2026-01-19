@@ -245,10 +245,15 @@ function Admission() {
                     )}
                   </div>
                   <div className='ml-4 mt-2'>
-                    <p className={`text-base ${currentStep === step.number ? 'font-medium text-[20px] text-[#555555]' : 'text-[18px] text-[#929292]'
-                      }`}>
+                    <p
+                      className={`text-base ${step.number <= currentStep
+                          ? 'font-medium text-[20px] text-[#555555]'
+                          : 'text-[18px] text-[#929292]'
+                        }`}
+                    >
                       {step.title}
                     </p>
+
                   </div>
                 </div>
               ))}
@@ -338,7 +343,223 @@ function Admission() {
               </>
             )}
 
-            
+            {/* Step 2: Parent Information */}
+            {currentStep === 2 && (
+              <>
+                <div className='flex-1'>
+                  <div className='grid grid-cols-2 gap-6'>
+                    <div>
+                      <label className='block font-medium text-[16px] text-[#555555] font-medium mb-2'>Parent/Guardian Full Name</label>
+                      <input
+                        type='text'
+                        name='parentName'
+                        value={formData.parentName}
+                        onChange={handleInputChange}
+                        required
+                        className='w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50'
+                      />
+                    </div>
+                    <div>
+                      <label className='block font-medium text-[16px] text-[#555555] font-medium mb-2'>Relationship to Student</label>
+                      <input
+                        type='text'
+                        name='relationship'
+                        value={formData.relationship}
+                        onChange={handleInputChange}
+                        required
+                        className='w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50'
+                      />
+                    </div>
+                    <div>
+                      <label className='block font-medium text-[16px] text-[#555555] font-medium mb-2'>Phone Number</label>
+                      <input
+                        type='tel'
+                        name='phoneNumber'
+                        value={formData.phoneNumber}
+                        onChange={handleInputChange}
+                        required
+                        className='w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50'
+                      />
+                    </div>
+                    <div>
+                      <label className='block font-medium text-[16px] text-[#555555] font-medium mb-2'>Email Address</label>
+                      <input
+                        type='email'
+                        name='email'
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className='w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50'
+                      />
+                    </div>
+                    <div>
+                      <label className='block font-medium text-[16px] text-[#555555] font-medium mb-2'>Address</label>
+                      <input
+                        type='text'
+                        name='address'
+                        value={formData.address}
+                        onChange={handleInputChange}
+                        required
+                        className='w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50'
+                      />
+                    </div>
+                    <div>
+                      <label className='block font-medium text-[16px] text-[#555555] font-medium mb-2'>City</label>
+                      <input
+                        type='text'
+                        name='city'
+                        value={formData.city}
+                        onChange={handleInputChange}
+                        required
+                        className='w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50'
+                      />
+                    </div>
+                    <div className='col-span-2'>
+                      <label className='block font-medium text-[16px] text-[#555555] font-medium mb-2'>State</label>
+                      <input
+                        type='text'
+                        name='state'
+                        value={formData.state}
+                        onChange={handleInputChange}
+                        required
+                        className='w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50'
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Navigation Buttons */}
+                <div className='flex justify-end gap-4 mt-6'>
+                  <button
+                    onClick={handleBack}
+                    className='px-8 py-3 bg-[#C8C8C8] text-white rounded-lg hover:bg-gray-400 font-medium'
+                  >
+                    Back
+                  </button>
+                  <button
+                    onClick={handleNext}
+                    disabled={!validateStep()}
+                    className="px-8 py-3 bg-[#3A53A4] text-white rounded-lg font-medium hover:bg-[#3d4d99] disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    Next
+                  </button>
+                </div>
+              </>
+            )}
+
+            {/* Step 3: Document Upload */}
+            {currentStep === 3 && (
+              <>
+                <div className='flex-1'>
+                  <div className='grid grid-cols-2 gap-8'>
+                    {/* Upload Section */}
+                    <div className='flex flex-col items-center justify-start'>
+                      <div className='w-full h-56 bg-[#E8EAF6] rounded-lg flex flex-col items-center justify-center mb-4'>
+                        <div className='w-20 h-20 bg-[#3A53A4] rounded-2xl flex items-center justify-center mb-3'>
+                          <svg className='w-10 h-10 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z' />
+                          </svg>
+                        </div>
+                        <p className='text-[#1C1C1C] font-medium'>Upload</p>
+                      </div>
+                      <input
+                        type='file'
+                        id='fileUpload'
+                        multiple
+                        onChange={handleFileUpload}
+                        className='hidden'
+                      />
+                      <label
+                        htmlFor='fileUpload'
+                        className='px-6 py-2 bg-[#3A53A4] text-white rounded-lg hover:bg-[#3d4d99] cursor-pointer'
+                      >
+                        Choose Files
+                      </label>
+                    </div>
+
+                    {/* Document List */}
+                    <div>
+                      <h3 className='text-[#555555] font-semibold mb-4'>List of Document</h3>
+                      <ul className='space-y-2  text-medium text-[#929292]'>
+                        <li>Birth Certificate</li>
+                        <li>Aadhar Card (Child)</li>
+                        <li>Aadhar Card (Parent)</li>
+                        <li>Previous Report Card / Transfer Certificate</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Uploaded Documents */}
+                  {uploadedDocuments.length > 0 && (
+                    <div className='mt-8'>
+                      <h3 className='text-[20px] font-semibold mb-4'>Uploaded Document</h3>
+                      <div className='space-y-3'>
+                        {uploadedDocuments.map((doc, index) => (
+                          <div key={index} className='flex justify-between items-center bg-gray-50 px-4 py-3 rounded-lg'>
+                            <span className='text-[#555555] text-[18px] font-medium'>{doc.name}</span>
+                            <button className='text-[#929292] hover:text-blue-600 font-medium text-[16px] text-[16px]'>View</button>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Navigation Buttons */}
+                <div className='flex justify-end gap-4 mt-6'>
+                  <button
+                    onClick={handleBack}
+                    className='px-8 py-3 bg-[#C8C8C8] text-white rounded-lg hover:bg-gray-400 font-medium'
+                  >
+                    Back
+                  </button>
+                  <button
+                    onClick={handleNext}
+                    disabled={!validateStep()}
+                    className="px-8 py-3 bg-[#3A53A4] text-white rounded-lg font-medium hover:bg-[#3d4d99] disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    Next
+                  </button>
+                </div>
+              </>
+            )}
+
+            {/* Step 4: Additional Information */}
+            {currentStep === 4 && (
+              <>
+                <div className='flex-1 rounded-lg p-8'>
+                  <div>
+                    <label className='block text-[16px] text-[#555555] font-medium mb-4'>
+                      Does the child have any medical condition?
+                    </label>
+                    <textarea
+                      name='medicalCondition'
+                      value={formData.medicalCondition}
+                      onChange={handleInputChange}
+                      placeholder='NA / Any medical condition'
+                      required
+                      className='w-full h-48 px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50 resize-none'
+                    />
+                  </div>
+                </div>
+
+                {/* Navigation Buttons */}
+                <div className='flex justify-end gap-4 mt-6'>
+                  <button
+                    onClick={handleBack}
+                    className='px-8 py-3 bg-[#C8C8C8] text-white rounded-lg hover:bg-gray-400 font-medium'
+                  >
+                    Back
+                  </button>
+                  <button
+                    onClick={handleSubmit}
+                    className='px-8 py-3 bg-[#3A53A4] text-white rounded-lg hover:bg-[#3d4d99] font-medium'
+                  >
+                    Submit
+                  </button>
+                </div>
+              </>
+            )}
 
           </div>
 

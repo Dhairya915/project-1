@@ -4,70 +4,70 @@ import React from 'react'
 function AboutUs() {
 
   const items = [
-  {
-    title: "Attendance Policy",
-    description:
-      "Regular attendance is compulsory for academic progress and participation in school activities.",
-    borderTop: "border-t-4 border-t-[#E8ECF7]",
-    textColor: "text-[#3A53A4]",
-  },
-  {
-    title: "Discipline Policy",
-    description:
-      "Students are expected to maintain respectful behavior and follow school rules at all times.",
-    borderTop: "border-t-4 border-t-[#E8ECF7]",
-    textColor: "text-[#3A53A4]",
-  },
-  {
-    title: "Uniform Policy",
-    description:
-      "Wearing the proper school uniform daily is mandatory for all students.",
-    borderTop: "border-t-4 border-t-[#E8ECF7]",
-    textColor: "text-[#3A53A4]",
-  },
-  {
-    title: "Homework Policy",
-    description:
-      "Homework must be completed on time to support continuous learning.",
-    borderTop: "border-t-4 border-t-[#FFF1E1]",
-    textColor: "text-[#F0942A]",
-  },
-  {
-    title: "Examination Policy",
-    description:
-      "Students must appear for all exams honestly and as per schedule.",
-    borderTop: "border-t-4 border-t-[#FFF1E1]",
-    textColor: "text-[#F0942A]",
-  },
-  {
-    title: "Mobile Phone Policy",
-    description:
-      "Mobile phones are not allowed within the school premises.",
-    borderTop: "border-t-4 border-t-[#FFF1E1]",
-    textColor: "text-[#F0942A]",
-  },
-  {
-    title: "Health and Safety Policy",
-    description:
-      "We ensure a clean, safe, and secure environment for every student.",
-    borderTop: "border-t-4 border-t-[#E8ECF7]",
-    textColor: "text-[#3A53A4]",
-  },
-  {
-    title: "Fee Payment Policy",
-    description:
-      "All fees should be paid on time as per the school’s payment schedule.",
-    borderTop: "border-t-4 border-t-[#E8ECF7]",
-    textColor: "text-[#3A53A4]",
-  },
-  {
-    title: "Digital Etiquette Policy",
-    description:
-      "Students must use digital platforms responsibly and respectfully.",
-    borderTop: "border-t-4 border-t-[#E8ECF7]",
-    textColor: "text-[#3A53A4]",
-  },
-];
+    {
+      title: "Attendance Policy",
+      description:
+        "Regular attendance is compulsory for academic progress and participation in school activities.",
+      borderTop: "border-t-4 border-t-[#E8ECF7]",
+      textColor: "text-[#3A53A4]",
+    },
+    {
+      title: "Discipline Policy",
+      description:
+        "Students are expected to maintain respectful behavior and follow school rules at all times.",
+      borderTop: "border-t-4 border-t-[#E8ECF7]",
+      textColor: "text-[#3A53A4]",
+    },
+    {
+      title: "Uniform Policy",
+      description:
+        "Wearing the proper school uniform daily is mandatory for all students.",
+      borderTop: "border-t-4 border-t-[#E8ECF7]",
+      textColor: "text-[#3A53A4]",
+    },
+    {
+      title: "Homework Policy",
+      description:
+        "Homework must be completed on time to support continuous learning.",
+      borderTop: "border-t-4 border-t-[#FFF1E1]",
+      textColor: "text-[#F0942A]",
+    },
+    {
+      title: "Examination Policy",
+      description:
+        "Students must appear for all exams honestly and as per schedule.",
+      borderTop: "border-t-4 border-t-[#FFF1E1]",
+      textColor: "text-[#F0942A]",
+    },
+    {
+      title: "Mobile Phone Policy",
+      description:
+        "Mobile phones are not allowed within the school premises.",
+      borderTop: "border-t-4 border-t-[#FFF1E1]",
+      textColor: "text-[#F0942A]",
+    },
+    {
+      title: "Health and Safety Policy",
+      description:
+        "We ensure a clean, safe, and secure environment for every student.",
+      borderTop: "border-t-4 border-t-[#E8ECF7]",
+      textColor: "text-[#3A53A4]",
+    },
+    {
+      title: "Fee Payment Policy",
+      description:
+        "All fees should be paid on time as per the school’s payment schedule.",
+      borderTop: "border-t-4 border-t-[#E8ECF7]",
+      textColor: "text-[#3A53A4]",
+    },
+    {
+      title: "Digital Etiquette Policy",
+      description:
+        "Students must use digital platforms responsibly and respectfully.",
+      borderTop: "border-t-4 border-t-[#E8ECF7]",
+      textColor: "text-[#3A53A4]",
+    },
+  ];
 
 
   const staffMembers = [
@@ -410,7 +410,8 @@ function AboutUs() {
       </div>
 
       {/* gallery slide-7 */}
-      <div className="py-17 bg-white h-[550px] ">
+      <div className=" bg-white h-[640px]  mt-5">
+
         <p className="w-full text-center text-[#F0942AE5] text-[18px] font-semibold">
           Gallery
         </p>
@@ -419,46 +420,59 @@ function AboutUs() {
           Life at Shishumandir – A Visual Story
         </p>
 
-        <div className="w-full  p-5">
-          {/* Grid container */}
-          <div className="grid grid-cols-5 gap-4 max-w-[1200px] mx-auto">
+        <div className="w-full h-[501px]  my-14 mx-2.5">
 
-            {/* Row 1 */}
-            <div className="flex justify-center">
-              <img src="/image1.png" alt="Image 1" className="h-[200px] object-cover rounded" />
-            </div>
-            <div className="flex justify-center">
-              <img src="/image2.png" alt="Image 2" className="h-[200px] object-cover rounded" />
-            </div>
-            <div className="flex justify-center">
-              <img src="/image3.png" alt="Image 3" className="h-[200px] object-cover rounded" />
-            </div>
-            <div className="flex justify-center">
-              <img src="/img1.png" alt="Image 4" className="h-[200px] object-cover rounded" />
-            </div>
-            <div className="flex justify-center">
-              <img src="/img2b.png" alt="Image 5" className="h-[200px] object-cover rounded" />
-            </div>
+          <div
+            className="w-full h-full grid grid-rows-[244px_257px] grid-cols-[289px_310px_219px_199px_199px_232px_61px] gap-2.5"
+          >
+            {/* ROW 1 */}
 
-            {/* Row 2 */}
-            <div className="flex justify-center">
-              <img src="/img2b2.png" alt="Image 6" className="h-[200px] object-cover rounded" />
-            </div>
-            <div className="flex justify-center">
-              <img src="/img1r.png" alt="Image 7" className="h-[200px] object-cover rounded" />
-            </div>
-            <div className="flex justify-center">
-              <img src="/img1l.png" alt="Image 8" className="h-[200px] object-cover rounded" />
-            </div>
-            <div className="flex justify-center">
-              <img src="/img2r.png" alt="Image 9" className="h-[200px] object-cover rounded" />
-            </div>
-            <div className="flex justify-center">
-              <img src="/img2b.png" alt="Image 10" className="h-[200px] object-cover rounded" />
-            </div>
+            <img src="/image2.png" className="w-[289px] h-[244px] object-cover rounded-lg" />
+
+            {/* Image 3 – spans 2 rows */}
+            <img
+              src="/image1.png"
+              className="row-span-2 w-[310px] h-[500px] object-cover rounded-lg"
+            />
+
+            {/* Image 4 – spans 2 columns */}
+            <img
+              src="/img1.png"
+              className="col-span-2 w-[427px] h-[301px] object-cover rounded-lg"
+            />
+
+            <img src="/lab.png" className="w-[219px] h-[199px] object-cover rounded-lg" />
+            <img src="/img4b.png" className="w-[232px] h-[199px] object-cover rounded-lg" />
+            <div />
+
+
+            {/* ROW 2 */}
+
+            <img src="/image3.png" className="w-[289px] h-[245px] object-cover rounded-lg" />
+
+            {/* Image 5 */}
+            <img
+              src="/img2b.png"
+              className="col-start-3 row-start-2 w-[219px] h-[190px] object-cover rounded-[10px] mt-[55px]"
+            />
+
+            {/* Image 6 */}
+            <img
+              src="/img2b2.png"
+              className="col-start-4 row-start-2 w-[199px] h-[190px] object-cover rounded-[10px] mt-[55px]"
+            />
+
+            {/* Image 9 – spans 2 columns */}
+            <img
+              src="/img9.png"
+              className="col-start-5 col-span-2 row-start-2 w-[464px] h-[292px] object-cover rounded-[10px] -translate-y-[47px]"
+            />
 
           </div>
+
         </div>
+
+
 
       </div>
 
