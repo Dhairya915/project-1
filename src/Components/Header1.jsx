@@ -57,12 +57,12 @@ function Header1() {
         {/* Right side (admission & phone) */}
         <div className="absolute w-[342px] h-[28.95px] top-[13px] left-[1091px] flex items-center justify-between px-1">
           <Link to="/admissions" className="flex items-center gap-3 text-sm font-medium">
-            <PencilLine />
+            <PencilLine size={20.46}/>
             <span>Admission Form</span>
           </Link>
 
           <div className="flex items-center gap-3 text-sm font-medium">
-            <PhoneCall />
+            <PhoneCall size={20.46} />
             <span>(914) 703-2250</span>
           </div>
         </div>
