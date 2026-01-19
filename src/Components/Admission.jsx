@@ -219,10 +219,11 @@ function Admission() {
           <span className='text-[30px] text-[#555555] font-semibold'>Fill out  admission form to begin your journey with us.</span>
         </div>
 
-        <div className={`w-[1343px] flex flex-row justify-between mt-[61px] transition-all duration-300 ${currentStep === 1 ? 'h-[473px]' :
+        <div className={`w-[1343px] flex flex-row justify-between mt-[61px] transition-all duration-300 ${
+          currentStep === 1 ? 'h-[473px]' :
           currentStep === 2 ? 'h-[510px]' :
-            currentStep === 3 ? 'h-[612px]' :
-              'h-[456px]'
+          currentStep === 3 ? 'h-[612px]' :
+           'h-[456px]'
           }`}>
 
           {/* Left Sidebar - Steps */}

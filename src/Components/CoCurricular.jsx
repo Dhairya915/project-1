@@ -102,16 +102,20 @@ function CoCurricular() {
               </div>
 
               {/* White D-shape (reversed) on right with only left border */}
-              <div className="w-[330px] h-[300px] mr-0 pr-0 rounded-l-full flex  border-l-30 border-white ">
-                {/* Image (fills D, no border on right) */}
-                <div className="w-[310px] h-full overflow-hidden rounded-l-full">
+              <div className="w-[320px] h-[300px] bg-white rounded-l-full flex items-center justify-end">
+
+                {/* Image */}
+                <div className="w-[290px] h-full overflow-hidden rounded-l-full bg-white">
                   <img
                     src="/dance.png"
                     alt="Dance"
-                    className="w-full h-full object-cover border-0"
+                    className="w-full h-full object-cover"
                   />
                 </div>
+
               </div>
+
+
 
             </div>
 
