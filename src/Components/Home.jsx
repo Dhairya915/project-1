@@ -17,7 +17,7 @@ function Home() {
                     alt="Background"
                 />
 
-                <div className="relative z-10 text-white px-4 sm:px-6 pb-8 sm:pb-10 h-full flex flex-col justify-end max-w-7xl mx-auto">
+                <div className="relative z-10 text-white px-4 sm:px-6 pb-8 sm:pb-10 h-full flex flex-col justify-end max-w-7xl mx-auto text-center sm:text-left items-center sm:items-start">
 
                     {/* Small intro text */}
                     <p className="font-ophelia text-lg sm:text-2xl md:text-3xl">
@@ -41,23 +41,24 @@ function Home() {
                 </div>
             </section>
 
-
             {/* SECTION 1 */}
             <section className="bg-white py-12">
-                <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-10 items-center">
+                <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-10">
 
+                    {/* Image grid */}
                     <div className="w-full md:w-1/2 grid grid-cols-2 gap-3">
                         <img src="/image2.png" className="h-40 sm:h-48 object-cover rounded" />
                         <img src="/image1.png" className="row-span-2 h-full object-cover rounded" />
                         <img src="/image3.png" className="h-40 sm:h-48 object-cover rounded" />
                     </div>
 
-                    <div className="w-full md:w-1/2">
+                    {/* Text */}
+                    <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center  md:text-left mt-0 md:mt-0">
                         <span className="text-[#F0942A] font-semibold">Why We Are</span>
                         <h2 className="text-2xl sm:text-3xl font-bold mt-2">
                             Foundation for a Bright and Balanced Future
                         </h2>
-                        <p className="text-gray-600 mt-4 leading-relaxed">
+                        <p className="text-gray-600 mt-4 leading-relaxed max-w-md">
                             At Shree B.S. Goswami Saraswati Shishumandir, education is not just academics
                             but character building, discipline, and values.
                         </p>

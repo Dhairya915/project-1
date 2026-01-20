@@ -41,7 +41,7 @@ function Footer() {
                     {/* ADDRESS */}
                     <div className="flex flex-col gap-4">
                         <div className="flex items-start gap-3">
-                            <MapPin stroke="#F0942A" strokeWidth={3} className="w-7 h-7" />
+                            <MapPin stroke="#F0942A" strokeWidth={3} className="w-[21.77px] h-[25.5px]" />
                             <div>
                                 <p className="font-bold text-lg">Address</p>
                                 <p className="text-sm leading-relaxed">
@@ -53,7 +53,7 @@ function Footer() {
                         </div>
 
                         <div className="flex items-start gap-3 mt-4">
-                            <SquareUser stroke="#F0942A" strokeWidth={2} className="w-7 h-7" />
+                            <SquareUser stroke="#F0942A" strokeWidth={2} className="w-[20px] h-[25px]" />
                             <div>
                                 <p className="font-bold text-lg">Contact Us</p>
 

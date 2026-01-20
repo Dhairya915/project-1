@@ -12,113 +12,81 @@ function Header1() {
     }`;
 
   return (
-    <header className="relative">
 
-      {/* Top div with fading blue bottom border */}
-      <div
-        className="
-        relative h-[50px] bg-white z-0
+    <header className="w-full">
 
-        /* thick outer fade */
-        after:content-['']
-        after:absolute after:bottom-0 after:left-0
-        after:w-full after:h-[1px]
-        after:bg-gradient-to-r
-        after:from-[#3A53A4]
-        after:via-[#3A53A4]/20
-        after:to-[#3A53A4]
+      {/* Top bar */}
+      <div className="w-full bg-white px-4 md:px-16 py-2 flex flex-wrap md:flex-nowrap justify-between items-center">
 
-        /* thin inner line */
-        before:content-['']
-        before:absolute before:bottom-0 before:left-0
-        before:w-full before:h-[0.5px]
-        before:bg-gradient-to-r
-        before:from-[#3A53A4]/60
-        before:via-transparent
-        before:to-[#3A53A4]/60
-      "
-      >
-
-        {/* Social media left side */}
-        <div className="absolute h-[28.95px] w-[208px] top-[15px] left-[80px] flex items-center justify-between">
+        {/* Left social icons */}
+        <div className="flex items-center gap-2 md:gap-4 mb-2 md:mb-0">
           <span className="text-sm font-medium">Follow us</span>
-
           <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-            <img src="/google_icon.png" alt="google logo" className="object-contain cursor-pointer" />
+            <img src="/google_icon.png" alt="google" className="w-5 h-5 md:w-6 md:h-6" />
           </a>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            <img src="/facebook.png" alt="facebook logo" className="object-contain cursor-pointer" />
+            <img src="/facebook.png" alt="facebook" className="w-5 h-5 md:w-6 md:h-6" />
           </a>
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <img src="/instagram.png" alt="instagram logo" className="object-contain cursor-pointer" />
+            <img src="/instagram.png" alt="instagram" className="w-5 h-5 md:w-6 md:h-6" />
           </a>
         </div>
 
-        {/* Right side (admission & phone) */}
-        <div className="absolute w-[342px] h-[28.95px] top-[13px] left-[1091px] flex items-center justify-between px-1">
-          <Link to="/admissions" className="flex items-center gap-3 text-sm font-medium">
-            <PencilLine size={20.46}/>
+        {/* Right admission & phone */}
+        <div className="flex items-center gap-2 md:gap-4">
+          <Link to="/admissions" className="flex items-center gap-1 md:gap-3 text-sm md:text-sm font-medium">
+            <PencilLine size={18} md:size={20} />
             <span>Admission Form</span>
           </Link>
-
-          <div className="flex items-center gap-3 text-sm font-medium">
-            <PhoneCall size={20.46} />
+          <div className="flex items-center gap-1 md:gap-3 text-sm md:text-sm font-medium">
+            <PhoneCall size={18} md:size={20} />
             <span>(914) 703-2250</span>
           </div>
         </div>
 
       </div>
 
-      {/* Middle large logo overlapping top div */}
-      <img
-        src="/logo.png"
-        alt="logo"
-        className="
-        absolute
-        left-1/2 -translate-x-1/2
-        top-0
-        h-[155px]
-        object-contain
-        z-10
-      "
-      />
+      {/* Logo with line behind */}
+      <div className="relative w-full flex justify-center -mt-6 md:-mt-12">
 
-      {/* Bottom nav div */}
-      <div className="flex items-center justify-between h-[105px]  px-6 py-4 bg-white relative z-0">
+        {/* Gradient line behind logo */}
+        <div className="absolute top-1/2 left-0 w-full h-[1px] md:h-[1px] bg-gradient-to-r from-[#3A53A4] via-[#3A53A4]/20 to-[#3A53A4] z-0 hidden md:block"></div>
+
+        <img src="/logo.png" alt="logo" className="relative z-10 h-[80px] md:h-[120px] object-contain" />
+      </div>
+
+      {/* Bottom nav */}
+      <nav className="w-full flex flex-wrap md:flex-nowrap items-center justify-between px-4 md:px-16 py-2 gap-2 md:gap-0">
 
         {/* Left links */}
-        <div className="flex items-center gap-8">
+        <div className="flex flex-wrap md:flex-nowrap items-center gap-3 md:gap-8 justify-center md:justify-start w-full md:w-auto">
           <NavLink to="/about-us" className={navLinkClass}>About Us</NavLink>
           <NavLink to="/academic-culture" className={navLinkClass}>Academic Culture</NavLink>
           <NavLink to="/school-culture" className={navLinkClass}>School Culture</NavLink>
           <NavLink to="/co-curricular" className={navLinkClass}>Co-Curricular</NavLink>
         </div>
 
-        {/* Center logo */}
-        <div className="flex-1 flex justify-center">
-          <img src="/logo.png" alt="Logo" className="h-[80px] object-contain" />
-        </div>
+        {/* Right links + search */}
+        <div className="flex flex-wrap md:flex-nowrap items-center gap-3 md:gap-8 justify-center md:justify-end w-full md:w-auto mt-2 md:mt-0">
 
-        {/* Right links */}
-        <div className="flex items-center gap-8">
           <NavLink to="/gallery" className={navLinkClass}>Gallery</NavLink>
           <NavLink to="/admissions" className={navLinkClass}>Admissions</NavLink>
           <NavLink to="/contact-us" className={navLinkClass}>Contact Us</NavLink>
 
           {/* Search box */}
-          <div className="relative w-[208px] h-[36px]">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
+          <div className="relative w-full md:w-[208px] h-8 md:h-9 mt-2 md:mt-0 flex-shrink-0">
+            <Search className="absolute left-2 md:left-3 top-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 text-gray-400 pointer-events-none" />
             <input
               type="text"
-              className="w-full h-full pl-10 pr-3 border border-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-[#F0942A]"
               placeholder="Search..."
+              className="w-full h-full pl-8 md:pl-10 pr-2 md:pr-3 border border-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-[#F0942A]"
             />
           </div>
-
         </div>
+      </nav>
 
-      </div>
     </header>
+
   );
 
 }
