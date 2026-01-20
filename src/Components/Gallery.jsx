@@ -37,14 +37,12 @@ function Gallery() {
               <div
                 key={index}
                 className="
-          relative w-full 
-          h-[220px]        /* mobile */
-          sm:h-[260px]     /* tablet */
-          md:h-[300px]     /* small laptop */
-          lg:h-[320px]     /* desktop */
-          rounded-xl overflow-hidden group
-        "
-              >
+                     relative w-full 
+                      h-[220px]        /* mobile */
+                      sm:h-[260px]     /* tablet */
+                      md:h-[300px]     /* small laptop */
+                      lg:h-[320px]     /* desktop */
+                      rounded-xl overflow-hidden group">
                 <img
                   src={item.img}
                   alt={item.title}
@@ -53,18 +51,18 @@ function Gallery() {
 
                 {/* Text overlays */}
                 <h3 className="
-          absolute bottom-3 left-3 
-          text-lg sm:text-xl md:text-[26px]
-          text-white font-bold drop-shadow-lg
-        ">
+                    absolute bottom-3 left-3 
+                    text-lg sm:text-xl md:text-[26px]
+                  text-white font-bold drop-shadow-lg
+                  ">
                   {item.title}
                 </h3>
 
                 <p className="
-          absolute bottom-2 right-3 
-          text-2xl sm:text-4xl md:text-[50px]
-          text-white font-semibold drop-shadow-lg
-        ">
+                     absolute bottom-2 right-3 
+                     text-2xl sm:text-4xl md:text-[50px]
+                     text-white font-semibold drop-shadow-lg
+                   ">
                   {item.num}
                 </p>
               </div>

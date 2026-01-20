@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react"
 
 function CoCurricular() {
 
   return (
+
     <div className='w-full'>
 
       {/* slide-1 */}
