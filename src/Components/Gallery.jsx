@@ -4,7 +4,7 @@ function Gallery() {
   return (
 
     <div>
-      
+
       <div className='w-[1512px] h-[1512px]'>
 
         <div className='w-full h-[83px] flex flex-col  justify-center items-center  mt-13 gap-1'>
@@ -329,3 +329,6 @@ function Gallery() {
 }
 
 export default Gallery
+
+
+
