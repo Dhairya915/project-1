@@ -10,26 +10,37 @@ function Home() {
         <div className="flex flex-col overflow-x-hidden">
 
             {/* HERO */}
-            <section className="relative min-h-[400px] md:h-[550px] w-full">
+            <section className="relative min-h-[360px] sm:min-h-[400px] md:h-[550px] w-full">
                 <img
                     src="/back.jpg"
                     className="absolute inset-0 w-full h-full object-cover blur-sm"
                     alt="Background"
                 />
 
-                <div className="relative z-10 text-white px-6 pb-10 h-full flex flex-col justify-end max-w-7xl mx-auto">
-                    <p className="font-ophelia text-2xl sm:text-3xl">Welcome to</p>
-                    <p className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight mt-2">
-                        Shree B.S. Goswami Saraswati <br /> Shisumandir
+                <div className="relative z-10 text-white px-4 sm:px-6 pb-8 sm:pb-10 h-full flex flex-col justify-end max-w-7xl mx-auto">
+
+                    {/* Small intro text */}
+                    <p className="font-ophelia text-lg sm:text-2xl md:text-3xl">
+                        Welcome to
                     </p>
 
-                    <div className="mt-4 text-sm sm:text-base max-w-xl">
+                    {/* Main heading */}
+                    <p className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug sm:leading-tight mt-1 sm:mt-2">
+                        Shree B.S. Goswami Saraswati
+                        <br className="hidden sm:block" />
+                        Shisumandir
+                    </p>
+
+                    {/* Description */}
+                    <div className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base max-w-[90%] sm:max-w-xl">
                         <p>A nurturing space for learning.</p>
                         <p>A foundation built on discipline.</p>
                         <p>Cultural values rooted in Saraswati Shishu Mandir.</p>
                     </div>
+
                 </div>
             </section>
+
 
             {/* SECTION 1 */}
             <section className="bg-white py-12">
@@ -82,68 +93,38 @@ function Home() {
             </section>
 
             {/* SECTION 3 */}
+            {/* GALLERY SECTION */}
             <section className="bg-white py-12">
-                <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-10 items-center">
-
-                    <div className="w-full md:w-1/2 grid grid-cols-2 gap-3">
-                        <img src="/img1l.png" className="h-40 sm:h-48 object-cover rounded" />
-                        <img src="/img1r.png" className="h-40 sm:h-48 object-cover rounded" />
-                        <img src="/img4b.png" className="h-40 sm:h-48 object-cover rounded" />
-                        <img src="/img2r.png" className="h-40 sm:h-48 object-cover rounded" />
-                    </div>
-
-                    <div className="w-full md:w-1/2">
-                        <span className="text-[#F0942A] font-semibold">School Culture</span>
-                        <h2 className="text-2xl sm:text-3xl font-bold mt-2">
-                            A Culture Rooted in Values and Discipline
-                        </h2>
-                        <p className="text-gray-600 mt-4 leading-relaxed">
-                            Our culture emphasizes respect, responsibility, and moral education
-                            to shape well-rounded individuals.
-                        </p>
-                    </div>
-
-                </div>
-            </section>
-
-            {/* SECTION 4 */}
-            <section className="bg-white py-12">
-                <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row gap-10 items-center">
-
-                    <div className="w-full md:w-1/2">
-                        <span className="text-[#F0942A] font-semibold">Co-Curricular</span>
-                        <h2 className="text-2xl sm:text-3xl font-bold mt-2">
-                            Nurturing Talents Beyond the Classroom
-                        </h2>
-                        <p className="text-gray-600 mt-4 leading-relaxed">
-                            Students explore arts, sports, debates, and cultural activities to
-                            build confidence and creativity.
-                        </p>
-                    </div>
-
-                    <div className="w-full md:w-1/2">
-                        <img src="./img.png" className="w-full h-64 object-cover rounded-xl" />
-                    </div>
-
-                </div>
-            </section>
-
-            {/* GALLERY */}
-            <section className="bg-white py-12">
-                <p className="text-center text-[#F0942A] font-semibold">Gallery</p>
-                <p className="text-center text-2xl sm:text-3xl font-semibold text-[#555]">
+                {/* Section Titles */}
+                <p className="text-center text-[#F0942A] font-semibold text-sm sm:text-base">
+                    Gallery
+                </p>
+                <p className="text-center text-[#555555] font-semibold text-xl sm:text-2xl md:text-3xl mt-1">
                     Life at Shishumandir – A Visual Story
                 </p>
 
-                <div className="max-w-7xl mx-auto px-4 mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                    {[
-                        "/image2.png", "/image1.png", "/img1.png", "/lab.png",
-                        "/img4b.png", "/image3.png", "/img2b.png", "/img2b2.png", "/img9.png"
-                    ].map((img, i) => (
-                        <img key={i} src={img} className="w-full h-40 object-cover rounded-lg" />
-                    ))}
+                {/* Gallery Grid Container */}
+                <div className="max-w-7xl mx-auto px-4 mt-8 overflow-x-auto">
+                    <div className="w-full min-w-[800px] h-auto grid grid-rows-[244px_257px] grid-cols-[289px_310px_219px_199px_199px_232px_61px] gap-2.5">
+
+                        {/* ROW 1 */}
+                        <img src="/image2.png" className="w-[289px] h-[244px] object-cover rounded-lg" />
+                        <img src="/image1.png" className="row-span-2 w-[310px] h-[500px] object-cover rounded-lg" />
+                        <img src="/img1.png" className="col-span-2 w-[427px] h-[301px] object-cover rounded-lg" />
+                        <img src="/lab.png" className="w-[219px] h-[199px] object-cover rounded-lg" />
+                        <img src="/img4b.png" className="w-[232px] h-[199px] object-cover rounded-lg" />
+                        <div />
+
+                        {/* ROW 2 */}
+                        <img src="/image3.png" className="w-[289px] h-[245px] object-cover rounded-lg" />
+                        <img src="/img2b.png" className="col-start-3 row-start-2 w-[219px] h-[190px] object-cover rounded-lg mt-[55px]" />
+                        <img src="/img2b2.png" className="col-start-4 row-start-2 w-[199px] h-[190px] object-cover rounded-lg mt-[55px]" />
+                        <img src="/img9.png" className="col-start-5 col-span-2 row-start-2 w-[464px] h-[292px] object-cover rounded-lg -translate-y-[47px]" />
+
+                    </div>
                 </div>
             </section>
+
 
             {/* ENROLL & QUERY */}
             <section className="flex flex-col md:flex-row mt-10">
