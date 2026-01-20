@@ -81,13 +81,26 @@ function Home() {
                         </p>
                     </div>
 
-                    <div className="w-full md:w-1/2 grid grid-cols-2 sm:grid-cols-3 gap-4">
-                        <img src="./img1.png" className="col-span-2 h-48 object-cover rounded-xl" />
-                        <img src="./img4t.png" className="h-48 object-cover rounded-xl" />
-                        <img src="./img2b.png" className="h-40 object-cover rounded-xl" />
-                        <img src="./img2b2.png" className="h-40 object-cover rounded-xl" />
-                        <img src="./img4b.png" className="h-40 object-cover rounded-xl" />
+                    <div className="w-full md:w-1/2 flex justify-center">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full max-w-4xl h-auto">
+                            <div className="col-span-2 sm:col-span-2 row-span-1 rounded-xl overflow-hidden">
+                                <img src="./img1.png" alt="Main campus" className="w-full h-full object-cover rounded-xl" />
+                            </div>
+                            <div className="rounded-xl overflow-hidden">
+                                <img src="./img4t.png" alt="Student" className="w-full h-full object-cover rounded-xl" />
+                            </div>
+                            <div className="rounded-xl overflow-hidden">
+                                <img src="./img2b.png" alt="Activities" className="w-full h-full object-cover rounded-xl" />
+                            </div>
+                            <div className="rounded-xl overflow-hidden">
+                                <img src="./img2b2.png" alt="Facilities" className="w-full h-full object-cover rounded-xl" />
+                            </div>
+                            <div className="rounded-xl overflow-hidden">
+                                <img src="./img4b.png" alt="Classroom" className="w-full h-full object-cover rounded-xl" />
+                            </div>
+                        </div>
                     </div>
+
 
                 </div>
             </section>
