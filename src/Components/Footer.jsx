@@ -23,16 +23,16 @@ function Footer() {
                         <p className="text-lg font-medium">Follow us</p>
 
                         <div className="flex gap-3">
-                            <div className="w-9 h-9 rounded-full bg-[#F0942A] flex items-center justify-center">
+                            <div className="w-7 h-7 rounded-full bg-[#F0942A] flex items-center justify-center">
                                 <Instagram />
                             </div>
-                            <div className="w-9 h-9 rounded-full bg-[#F0942A] flex items-center justify-center">
+                            <div className="w-7 h-7 rounded-full bg-[#F0942A] flex items-center justify-center">
                                 <Facebook />
                             </div>
-                            <div className="w-9 h-9 rounded-full bg-[#F0942A] flex items-center justify-center">
+                            <div className="w-7 h-7 rounded-full bg-[#F0942A] flex items-center justify-center">
                                 <Twitter />
                             </div>
-                            <div className="w-9 h-9 rounded-full bg-[#F0942A] flex items-center justify-center">
+                            <div className="w-7 h-7 rounded-full bg-[#F0942A] flex items-center justify-center">
                                 <Chromium />
                             </div>
                         </div>
@@ -41,7 +41,7 @@ function Footer() {
                     {/* ADDRESS */}
                     <div className="flex flex-col gap-4">
                         <div className="flex items-start gap-3">
-                            <MapPin stroke="#F0942A" strokeWidth={3} className="w-[21.77px] h-[25.5px]" />
+                            <MapPin stroke="#F0942A" strokeWidth={3} size={25} className='shrink-0'/>
                             <div>
                                 <p className="font-bold text-lg">Address</p>
                                 <p className="text-sm leading-relaxed">
@@ -53,7 +53,7 @@ function Footer() {
                         </div>
 
                         <div className="flex items-start gap-3 mt-4">
-                            <SquareUser stroke="#F0942A" strokeWidth={2} className="w-[20px] h-[25px]" />
+                            <SquareUser stroke="#F0942A" strokeWidth={2} size={25} className='shrink-0'/>
                             <div>
                                 <p className="font-bold text-lg">Contact Us</p>
 
